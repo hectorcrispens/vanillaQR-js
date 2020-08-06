@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>QR Reader</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+   
+    <link href="./css/vanillaQR.css" rel="stylesheet">
+
+    <style>
+    .container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 8%;
+    }
+    </style>
+
+
+
+</head>
+
+<body>
+    <div class="container">
+        <div id="vanillaQR"></div>
+        <p id="texto"></p>
+    </div>
+    
+<script src="./js/jsQR.js"></script>
+<script src="./js/vanillaQR.js" ></script>
+<script>
+    var validqr = function(str){
+        if(str.includes("corel") ){
+    return true;
+  }else{
+    return false;
+  }
+}
+
+
+    var reader = new vanillaQR(validqr, "#FF3B58", "#108A97", true);
+    reader.inicialize();
+    reader.start();
+    
+    var t = setInterval(function(){var text = reader.scan();
+    document.getElementById("texto").innerText = text}, 300);
+</script>
+</body>
+
+</html>

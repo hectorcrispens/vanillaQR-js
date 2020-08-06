@@ -1,0 +1,42 @@
+#vanillaQR{
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+.qrvideo{
+    position: absolute;
+    width: 100%;
+    height: auto;
+    padding: 10px;
+    z-index: 1;
+    background-color: grey;
+}
+.qrcanvas{
+    position: absolute;
+    width: 100%;
+    height: auto;
+    padding: 10px;
+    opacity: 0.8;
+}
+.none{
+    display: none;
+}
+.error{
+    background-color: grey;
+    width: 100%;
+    min-height: 40%;
+    text-align: center;
+    vertical-align: middle;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+#c1{
+    display: none;
+}
+
+#c2{
+    /*top: -200%;*/
+    /*background-color: aquamarine;*/
+    z-index: 2;
+}
